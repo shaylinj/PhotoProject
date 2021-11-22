@@ -7,9 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PhotoProjectRepository" />
-        <module name="PhotoProjectWeb" />
         <module name="PhotoProjectDomain" />
         <module name="PhotoProjectAWS" />
+      </profile>
+      <profile name="Annotation profile for PhotoProject" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/2.0.4.RELEASE/spring-boot-configuration-processor-2.0.4.RELEASE.jar" />
+        </processorPath>
+        <module name="PhotoProjectWeb" />
       </profile>
     </annotationProcessing>
   </component>
